@@ -1,0 +1,49 @@
+#rotator {
+  width: 450px;
+  height: 300px;
+  border: 1px solid black;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#rotator ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 2250px;
+  position: absolute;
+}
+
+#rotator ul li {
+  position: relative;
+  display: block;
+  margin: 0;
+  float: left;
+  width: 450px;
+  height: 300px;
+}
+
+#rotator h4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3px;
+}
+
+#rotator img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#rotator p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 3px 0px 0px;
+  height: 31px;
+}
