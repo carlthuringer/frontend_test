@@ -19,10 +19,9 @@ onload = function setupPage() {
 }
 
 function draw(time) {
-  var newPosition
-  newPosition = Math.max(0, stepper((time - 3000)/ 3) % nlCards.length)
+  var newPosition = Math.max(0, stepper((time - 3000)/ 3) % nlCards.length)
   if(!(stepper(time/3) < 1))
-    newPosition += linearCeilingWave(time, 3)
+    newPosition += squareCeilingWave(time, 3)
   elCardUl.style.left = -newPosition  * nlCards[0].clientWidth + 'px'
   requestAnimationFrame(draw)
 }
@@ -32,5 +31,11 @@ function stepper(time) {
 }
 
 function linearCeilingWave(time, frequency) {
-  return Math.min(time / 1000 % frequency)
+  return Math.min(time / 1000 % frequency, 1)
+}
+
+function squareCeilingWave(time, frequency) {
+  var modTime = (time / 1000 % frequency)
+  if(modTime/2 < 0.5) return Math.min((1/2) * modTime * modTime, 1)
+  return Math.min((1/2)*((modTime -= 2) * modTime * modTime + 2), 1)
 }
