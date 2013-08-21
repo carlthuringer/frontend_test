@@ -5,6 +5,16 @@
 	<link type="text/css" rel="stylesheet" href="../css/style.css" />
   <link type="text/css" rel="stylesheet" href="../css/tabbed_content.css" />
   <script type='text/javascript' src='../js/tabbed_content.js'></script>
+  <script type='text/javascript'>
+    (function() {
+      'use strict';
+      window.onload = function setupTabs() {
+        var elTabDiv = document.querySelector('#tab-content'),
+        tabber = new Tabber(elTabDiv);
+        tabber.prepareUI();
+      }
+    }());
+  </script>
 </head>
 <body>	
 	<div id="headwrap">
@@ -29,12 +39,12 @@
     <div id="container">
       Turn this content into a tabbed container.
 
-      <ul class='tabs'>
-        <li data-tab='tab1'> <h3>Tab 1</h3> </li>
-        <li data-tab='tab2'> <h3>Tab 2</h3> </li>
-        <li data-tab='tab3'> <h3>Tab 3</h3> </li>
-      </ul>
-      <div class='content tab1'>
+      <div id='tab-content' class='content tab1'>
+        <ul class='tabs'>
+          <li data-tab='tab1' class='active'> <h3>Tab 1</h3> </li>
+          <li data-tab='tab2'> <h3>Tab 2</h3> </li>
+          <li data-tab='tab3'> <h3>Tab 3</h3> </li>
+        </ul>
         <div class='tab1'>
           <p>
           Gingerbread muffin gummies gingerbread macaroon. Lollipop candy applicake toffee faworki. Bear claw topping jelly toffee toffee powder tiramisu candy chupa chups. Chupa chups dragee icing applicake chupa chups dessert. Croissant jelly faworki marzipan tootsie roll marshmallow. Marshmallow toffee sweet roll fruitcake.

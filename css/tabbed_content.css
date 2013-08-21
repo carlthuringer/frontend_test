@@ -30,6 +30,10 @@ ul.tabs li {
   background: 1px solid #333;
 }
 
+ul.tabs li.active {
+  border: 2px solid #666;
+}
+
 ul.tabs li h3 {
   margin: 5px 3px;
 }
@@ -42,6 +46,7 @@ ul.tabs li h3 {
 
 .content div {
   display: none;
+  clear: both;
 }
 
 .content.tab1 div.tab1 {
