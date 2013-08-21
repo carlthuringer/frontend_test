@@ -3,6 +3,18 @@
 <head>
 <title>Frontend Coding Test</title>
 <script type="text/javascript" src="../js/rotator.js"></script>
+<script type="text/javascript">
+  (function() {
+    'use strict';
+
+    window.onload = function setupPage() {
+      var elList = document.querySelector('#rotator'),
+      rotator = new Rotator(elList);
+      rotator.prepareUI();
+      rotator.draw();
+    };
+  }());
+</script>
 <link type="text/css" rel="stylesheet" href="../css/style.css" />
 <link type="text/css" rel="stylesheet" href="../css/rotator.css" />
 </head>

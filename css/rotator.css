@@ -3,7 +3,7 @@
   height: 300px;
   border: 1px solid black;
   text-align: center;
-  overflow: hidden;
+  overflow-y: hidden;
   position: relative;
 }
 
