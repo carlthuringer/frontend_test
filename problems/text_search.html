@@ -4,6 +4,19 @@
 	<title>Frontend Coding Test | Text Search</title>
 	<link type="text/css" rel="stylesheet" href="../css/style.css" />
   <script type="text/javascript" src="../js/text_search.js"></script>
+  <script type="text/javascript">
+  (function() {
+    'use strict';
+
+    window.onload = function setup() {
+      var elInput = document.querySelector('#search_input'),
+      elResults = document.querySelector('.js-found-text'),
+      elSearchText = document.querySelector('#search_text'),
+      searcher = new window.Searcher(elInput, elResults, elSearchText);
+      searcher.prepareUI();
+    };
+  }());
+  </script>
 </head>
 <body>
 <div id="headwrap">
@@ -30,7 +43,6 @@
 	<h2>Search</h2>
 	<form>
 		<input type="text" id="search_input" value="llama" />
-		<input type="submit" value="Search" />
 	</form>
 
 	<h3>Results</h3>
