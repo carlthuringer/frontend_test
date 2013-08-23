@@ -1,5 +1,5 @@
 (function() {
-  'use strict'
+  'use strict';
 
   window.Searcher = function(elInput, elResults, elSearchable) {
     this.elInput = elInput;
@@ -25,12 +25,15 @@
   };
 
   window.Searcher.prototype.findWordCount = function(word) {
+    if(word.match(/\w+/) === null) {
+      return 0;
+    }
     var wordRegex = new RegExp(word, 'gi'),
-    matches = this.elSearchable.match(wordRegex)
+    matches = this.elSearchable.match(wordRegex);
     if(matches) {
       return matches.length;
     } else {
       return 0;
     }
   };
-}())
+}());

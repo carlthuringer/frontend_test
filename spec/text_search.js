@@ -37,6 +37,12 @@
         var searcher = new window.Searcher(this.elInput, this.elResultsDiv, this.elSearchDiv);
         expect(searcher.findWordCount('lazy')).toBe(2);
       });
+
+      it('returns zero when the word is a non-word character', function() {
+        var searcher = new window.Searcher(this.elInput, this.elResultsDiv, this.elSearchDiv);
+        expect(searcher.findWordCount('?')).toBe(0);
+
+      });
     });
 
     describe('#updateResultCount', function() {

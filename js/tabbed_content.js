@@ -28,7 +28,7 @@
     tabClass = clickedTab.dataset.tab;
     this.removeAllTabClasses();
     this.removeAllActiveClasses();
-    clickedTab.classList.add('active')
+    clickedTab.classList.add('active');
     this.elTabDiv.classList.add(tabClass);
   };
 
@@ -51,4 +51,4 @@
       this.elTabDiv.classList.remove(this.tabClassList[_i])
     }
   };
-})();
+}());
